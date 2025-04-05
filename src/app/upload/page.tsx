@@ -1,8 +1,6 @@
-// app/page.tsx
-
 import React from 'react';
 
-const Home = () => {
+const Upload = () => {
   return (
     <div style={{ fontFamily: 'Cursive, sans-serif' }}>
       {/* Main Content */}
@@ -13,11 +11,11 @@ const Home = () => {
         justifyContent: 'center',
         alignItems: 'center'
       }}>
-        <h1 style={{ fontSize: '4rem' }}>ta.ai</h1>
+        <h1 style={{ fontSize: '4rem' }}>[upload]</h1>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default Upload;
 
