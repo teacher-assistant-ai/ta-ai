@@ -8,8 +8,8 @@ const Navbar = () => {
         {/* <span className={`text-2xl font-extrabold font-mono`}>Ta.ai</span> */}
         <Image
             src={"/img/logo.png"}
-            height={64}
-            width={64}
+            height={72}
+            width={72}
             alt="ta.ai"
         />
       </div>

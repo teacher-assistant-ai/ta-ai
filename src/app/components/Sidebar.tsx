@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import CreateDocument from '../editor/CreateDocument';
 
 const Sidebar = () => {
     const recentDocs = [
@@ -8,16 +9,16 @@ const Sidebar = () => {
         { id:4, title: 'Document 4'}
     ];
     return (
-      <div className="w-64 h-screen bg-[#CAD2C5] p-5 flex flex-col border-r-4 border-[#52796F]">
-        <h2 className="text-[#354F52] text-2xl font-semibold mb-6 whitespace-nowrap">
-            Recent Documents
+      <div className="w-64 bg-[#CAD2C5] flex flex-col border-r-4 border-[#52796F] py-4">
+        <h2 className="text-[#354F52] text-2xl font-semibold mb-6 whitespace-nowrap px-4">
+            Your Documents
         </h2>
-        <ul>
+        <ul className='grid grid-cols-[1fr]'>
           {recentDocs.map((doc) => (
-            <li key={doc.id} className="mb-6">
+            <li key={doc.id} className="text-[#2F3E46] text-md hover:text-white transition-colors duration-200 hover:bg-[#52796F] px-4 p-2 cursor-pointer">
               <Link
-              href={`/document/${doc.id}`} // link to the document page
-              className="text-[#2F3E46] text-lg hover:text-[#84A98C] transition-colors duration-200"
+                href={`/editor/doc/${doc.id}`} // link to the document page
+                className=""
               >
                 <span className="mr-3">📄</span>
                 {doc.title}
@@ -25,6 +26,7 @@ const Sidebar = () => {
             </li>
           ))}
         </ul>
+        <CreateDocument />
       </div>
   );
 };
