@@ -18,5 +18,5 @@ export async function middleware(req: any) {
 }
 
 export const config = {
-  matcher: ['/protected/:path*'], // Protect all routes under /protected
+  //matcher: ['/protected/:path*'], 
 };
