@@ -2,7 +2,7 @@
 
 import WordSeparator from "@/app/components/WordSeparator";
 import Link from "next/link";
-import { login } from "../actions";
+import { login, signup } from "../actions";
 
 export default async function SignUpPage() {
   return (
@@ -19,7 +19,7 @@ export default async function SignUpPage() {
       <h1 className="text-4xl font-extrabold mb-4">ta.ai</h1>
       <p className="text-2xl text-center mb-4">Sign up and create your account!</p>
       <div className="flex flex-col bg-white shadow-md rounded-2xl w-[450px] p-12 gap-4">
-        <form action={login} className="flex flex-col gap-4">
+        <form action={signup} className="flex flex-col gap-4">
           <div className="flex flex-col">
             <label htmlFor="email" className="mb-2">
               Email
