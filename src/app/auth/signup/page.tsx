@@ -2,7 +2,7 @@
 
 import WordSeparator from "@/app/components/WordSeparator";
 import Link from "next/link";
-import { login, signup } from "../actions";
+import { signup } from "../actions";
 
 export default async function SignUpPage() {
   return (
