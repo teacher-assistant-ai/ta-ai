@@ -1,6 +1,7 @@
 import { PiPlusCircleBold } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
-import GeneratedQuestion from "./GeneratedQuestion";
+import GeneratedQuestion from "./doc/[id]/GeneratedQuestion";
+import Sidebar from "../components/Sidebar";
 
 type Props = {}
 
@@ -23,23 +24,19 @@ const data = {
 */
 const Page = (props: Props) => {
   return (
-    <div className="w-screen h-screen light:bg-white flex flex-col items-center justify-center">
-        {/* <div>
-
-        </div> */}
-
+        <>
+        {/* <div className="grow">someting</div> */}
         {/* <GeneratedQuestion question={data.question} answer={data.answer} howTo={data.how_to}/> */}
-        <div>
+        {/* <div>
             <h1 className="font-bold text-2xl mb-4">Generate your document!</h1>
             <div className="rounded-2xl shadow-md grid grid-cols-[2fr_1fr] h-[400px] p-8 gap-4 w-[800px]">
                 <div className="flex flex-col pt-2 px-4">
                     <h2 className="font-bold text-xl mb-3">Enter your material:</h2>
                     <textarea className="border-1 border-gray-200 rounded-sm w-full grow p-2"/>
-                    {/* Drop  */}
-                    {/* <select>
+                    <select>
                         <option value="Text">Text</option>
                         <option value="Link">Link</option>
-                    </select> */}
+                    </select>
                 </div>
                 <div className="flex flex-col bg-gray-100 rounded-sm  py-2 px-4">
                     <h2 className="font-bold text-xl mb-3 col-span-2">Options:</h2>
@@ -63,15 +60,11 @@ const Page = (props: Props) => {
                             <label htmlFor="generateGuide">Generate solution guide?</label>
                         </div>
                     </div>
-                    {/* <div><input type="number" />Number of questions?</div>
-                    <div><input type="checkbox" />Generate answers?</div>
-                    <div><input type="checkbox" />Generate solution guide?</div> */}
-
                     <button className="rounded-sm border-1 p-2 ml-auto text-sm hover:bg-blue-300 col-span-2 mt-auto mx-auto">Generate a response <RiGeminiFill className="ml-1 inline"/></button>
                 </div>
             </div>
-        </div>
-    </div>
+        </div> */}
+        </>
   )
 }
 
