@@ -1,6 +1,6 @@
 import { PiPlusCircleBold } from "react-icons/pi";
 import { RiGeminiFill } from "react-icons/ri";
-import GeneratedQuestion from "./GeneratedQuestion";
+import GeneratedQuestion from "./doc/[id]/GeneratedQuestion";
 import Sidebar from "../components/Sidebar";
 
 type Props = {}
