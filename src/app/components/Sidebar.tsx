@@ -23,10 +23,10 @@ const Sidebar = async () => {
         </h2>
         <ul className='grid grid-cols-[1fr]'>
           {documents.map((doc) => (
-            <li key={doc.id} className="text-[#2F3E46] text-md hover:text-white transition-colors duration-200 hover:bg-[#52796F] px-4 p-2 cursor-pointer">
+            <li key={doc.id} className="text-[#2F3E46] text-md hover:text-white transition-colors duration-200 hover:bg-[#52796F]">
               <Link
                 href={`/editor/doc/${doc.id}`} // link to the document page
-                className=""
+                className="w-full h-full px-4 p-2 cursor-pointer block"
               >
                 <span className="mr-3">📄</span>
                 {doc.title}

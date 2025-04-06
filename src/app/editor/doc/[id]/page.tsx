@@ -1,4 +1,5 @@
 import { createSupabaseServerClient } from "@/utils/supabase/server";
+import GeneratedQuestion from "./GeneratedQuestion";
 
 export default async function Page({
   params,
@@ -36,10 +37,18 @@ export default async function Page({
   }
 
   return (
-    <div className="w-full h-full overflow-scroll">
-      <h1 className="text-2xl">{document.title}</h1>
-      <div className="flex flex-col"></div>
+    <div className="w-full h-full overflow-scroll py-8 px-16">
+      <h1 className="text-2xl font-bold mb-4 text-center">{document.title}</h1>
+      <div className="flex flex-col items-center gap-8">
+        {questions.map((question) => 
+          <GeneratedQuestion 
+            key={question.id}
+            question={question.question}
+            answer={question.answer}
+            howTo={question.how_to}
+          />
+        )}
+      </div>
     </div>
-    // <div>High TIIIIIIIIIIIIIIIIIIIDEEEEEEEEEEEE</div>
   );
 }
