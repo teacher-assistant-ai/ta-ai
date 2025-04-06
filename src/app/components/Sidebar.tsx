@@ -1,10 +1,8 @@
 import Link from 'next/link';
+import CreateDocument from '../editor/CreateDocument';
 import {createSupabaseServerClient} from '../../utils/supabase/server';
 
 const Sidebar = async () => {
-  console.log("Supabase URL:", process.env.NEXT_PUBLIC_SUPABASE_URL);
-  console.log("Supabase KEY:", process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY);
-
     const recentDocs = [
         { id:1, title: 'Document 1'},
         { id:2, title: 'Document 2'},
@@ -22,16 +20,16 @@ const Sidebar = async () => {
       return <div className='p-4 text-red-500'>Failed to load document</div>
     }
     return (
-      <div className="w-64 h-screen bg-[#CAD2C5] p-5 flex flex-col border-r-4 border-[#52796F]">
-        <h2 className="text-[#354F52] text-2xl font-semibold mb-6 whitespace-nowrap">
-            Recent Documents
+      <div className="w-64 bg-[#CAD2C5] flex flex-col border-r-4 border-[#52796F] py-4">
+        <h2 className="text-[#354F52] text-2xl font-semibold mb-6 whitespace-nowrap px-4">
+            Your Documents
         </h2>
-        <ul>
-          {materials?.map((material) => (
-            <li key={material.id} className="mb-6">
+        <ul className='grid grid-cols-[1fr]'>
+          {recentDocs.map((doc) => (
+            <li key={doc.id} className="text-[#2F3E46] text-md hover:text-white transition-colors duration-200 hover:bg-[#52796F] px-4 p-2 cursor-pointer">
               <Link
-              href={`/document/${material.id}`} // link to the document page
-              className="text-[#2F3E46] text-lg hover:text-[#84A98C] transition-colors duration-200"
+                href={`/editor/doc/${doc.id}`} // link to the document page
+                className=""
               >
                 <span className="mr-3">📄</span>
                 {material.title}
@@ -39,6 +37,7 @@ const Sidebar = async () => {
             </li>
           ))}
         </ul>
+        <CreateDocument />
       </div>
   );
 };
